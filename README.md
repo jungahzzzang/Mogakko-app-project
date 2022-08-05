@@ -41,10 +41,6 @@ src
 │   ├── StudyRecruit.js //메인페이지, 스터디 모집 리스트 페이지
 │   ├── StudyRecruitDetail.js // 스터디 모집 상세 페이지
 │   ├── StudyRecruitWrite.js // 스터디 모집 작성 페이지
-├── public
-│   ├── 
-│   ├── 
-│   ├── 
 ├── package.json // 설치 라이브러리
 ├── utils // 프로젝트에서 이용할 기타 기능 관리
 │   ├── 
