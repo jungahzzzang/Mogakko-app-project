@@ -33,9 +33,9 @@ src
 │   ├── MainTab.js // 하단 탭
 ├── screens // 화면 파일 관리
 │   ├── Mypage.js 
-│   ├── StudyChannel.js // 채팅방
-│   ├── ChannelCreation.js // 채팅방 생성
-│   ├── StudyChannelList.js // 채팅방 목록
+│   ├── StudyChat.js // 채팅방
+│   ├── ChatCreation.js // 채팅방 생성
+│   ├── StudyChatList.js // 채팅방 목록
 │   ├── SingIn.js // 로그인 페이지
 │   ├── SignUp.js // 회원가입 페이지
 │   ├── StudyRecruit.js //메인페이지, 스터디 모집 리스트 페이지
