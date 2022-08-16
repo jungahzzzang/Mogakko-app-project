@@ -1,91 +1,52 @@
-!SESSION 2022-08-04 15:22:24.988 -----------------------------------------------
-eclipse.buildId=4.21.0.I20210906-0500
-java.version=16.0.2
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.jface 2 0 2022-08-04 15:22:46.313
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-04 15:22:46.313
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@a47a011,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6441da2c,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-04 15:22:46.313
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61b11d35,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7c7d83ff,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-04 15:22:53.234
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-04 15:22:53.235
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.egit.ui 2 0 2022-08-04 15:22:53.295
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\jin'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.ui.ide 4 4 2022-08-04 15:27:16.750
+!ENTRY org.eclipse.ui.ide 4 4 2022-08-16 15:23:17.288
 !MESSAGE Not properly disposed SWT resource
 !STACK 0
 java.lang.Error: SWT Resource was not properly disposed
 	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
-	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:113)
-	at org.eclipse.swt.graphics.GC.<init>(GC.java:167)
-	at org.eclipse.swt.graphics.GC.<init>(GC.java:135)
-	at org.springsource.ide.eclipse.commons.livexp.ui.DescriptionSection.createContents(DescriptionSection.java:99)
-	at org.springsource.ide.eclipse.commons.livexp.ui.GroupSection.createContents(GroupSection.java:99)
-	at org.springsource.ide.eclipse.commons.livexp.ui.GroupSection.createContents(GroupSection.java:99)
-	at org.springframework.ide.eclipse.boot.livexp.ui.DynamicSection.updateContent(DynamicSection.java:88)
-	at org.springframework.ide.eclipse.boot.livexp.ui.DynamicSection.lambda$0(DynamicSection.java:64)
-	at org.springsource.ide.eclipse.commons.livexp.core.UIValueListener$1.uiGotValue(UIValueListener.java:75)
-	at org.springsource.ide.eclipse.commons.livexp.core.UIValueListener$NotifyingJob.runInUIThread(UIValueListener.java:39)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
-	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
-	at org.eclipse.jface.window.Window.open(Window.java:799)
-	at org.eclipse.ui.internal.handlers.WizardHandler$New.executeHandler(WizardHandler.java:263)
-	at org.eclipse.ui.internal.handlers.WizardHandler.execute(WizardHandler.java:283)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:683)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:274)
+	at org.eclipse.jface.resource.DeferredImageDescriptor.createImage(DeferredImageDescriptor.java:79)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:287)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:265)
+	at org.eclipse.ui.internal.dialogs.ViewLabelProvider.getImage(ViewLabelProvider.java:102)
+	at org.eclipse.jface.viewers.ColumnLabelProvider.update(ColumnLabelProvider.java:41)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:957)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:126)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1035)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:427)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2109)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createTreeItem(AbstractTreeViewer.java:851)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:829)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:604)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:777)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalInitializeTree(AbstractTreeViewer.java:1597)
+	at org.eclipse.jface.viewers.TreeViewer.internalInitializeTree(TreeViewer.java:780)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.lambda$1(AbstractTreeViewer.java:1582)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:363)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.inputChanged(AbstractTreeViewer.java:1576)
+	at org.eclipse.ui.dialogs.FilteredTree$NotifyingTreeViewer.inputChanged(FilteredTree.java:966)
+	at org.eclipse.jface.viewers.ContentViewer.setInput(ContentViewer.java:282)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1632)
+	at org.eclipse.ui.internal.dialogs.ShowViewDialog.createFilteredTreeViewer(ShowViewDialog.java:226)
+	at org.eclipse.ui.internal.dialogs.ShowViewDialog.createDialogArea(ShowViewDialog.java:164)
+	at org.eclipse.jface.dialogs.Dialog.createContents(Dialog.java:767)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1094)
+	at org.eclipse.jface.window.Window.open(Window.java:788)
+	at org.eclipse.ui.handlers.ShowViewHandler.openOther(ShowViewHandler.java:106)
+	at org.eclipse.ui.handlers.ShowViewHandler.execute(ShowViewHandler.java:81)
 	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
 	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at jdk.internal.reflect.GeneratedMethodAccessor102.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -96,25 +57,16 @@ java.lang.Error: SWT Resource was not properly disposed
 	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
 	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
 	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:580)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:647)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:439)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommand(LegacyHandlerService.java:389)
+	at org.eclipse.ui.internal.ShowViewMenu$1.run(ShowViewMenu.java:132)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1270)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1059)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1111)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1107)
-	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1536)
-	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4875)
-	at org.eclipse.swt.widgets.ToolBar.WM_CHAR(ToolBar.java:1301)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4753)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4966)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3624)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4237)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
@@ -136,1803 +88,214 @@ java.lang.Error: SWT Resource was not properly disposed
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SESSION 2022-08-16 15:23:27.428 -----------------------------------------------
+eclipse.buildId=4.21.0.I20210906-0500
+java.version=16.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.ui 2 2 2022-08-04 15:27:51.795
+!ENTRY org.eclipse.jface 2 0 2022-08-16 15:24:31.983
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-16 15:24:31.983
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@8e100e7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@420dde28,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-16 15:24:31.983
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6d3a56ea,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@141874c8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-08-16 15:24:41.055
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-08-16 15:24:41.060
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-08-16 15:24:41.108
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2022-08-16 15:26:34.384
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:28:56.420
+!ENTRY org.eclipse.jface 2 0 2022-08-16 15:31:51.857
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-16 15:31:51.857
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@213229a5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6331b2d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SESSION 2022-08-16 15:32:02.320 -----------------------------------------------
+eclipse.buildId=4.21.0.I20210906-0500
+java.version=16.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2022-08-16 15:32:11.591
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-16 15:32:11.591
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6d18401b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ebcfcf1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-16 15:32:11.591
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@8e100e7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@420dde28,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2022-08-16 15:32:19.081
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-16 15:32:19.081
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@60729135,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@75e1a63e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-08-16 15:32:19.430
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-08-16 15:32:19.432
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-08-16 15:32:19.483
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2022-08-16 15:33:31.084
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:37:50.647
 !MESSAGE Entering DelegatingStreamConnectionProvider()
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:28:56.422
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@416e4037[org.springframework.tooling.boot.ls:1.36.0.202206171137(id=1043)]
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:37:50.649
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6c75aee8[org.springframework.tooling.boot.ls:1.36.0.202206171137(id=1043)]
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:28:56.426
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:37:50.663
 !MESSAGE SpringBootLanguageServer exists!
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:28:56.467
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:37:50.942
 !MESSAGE Instantiating ReusableClasspathListenerHandler
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:29:00.696
-!MESSAGE Boot LS startup time from start to initialized: 4255ms
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:38:03.053
+!MESSAGE Boot LS startup time from start to initialized: 12370ms
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:29:00.963
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.JKBvIdGMisBatched = true
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:38:04.335
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.akWdnDREisBatched = true
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:29:00.967
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:38:04.343
 !MESSAGE Setting up ClasspathListenerManager
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:29:00.971
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:38:04.349
 !MESSAGE Scheduling initial event for all projects ...
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:29:00.972
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:38:04.351
 !MESSAGE Scheduling initial event for all projects DONE
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:29:00.973
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:38:04.352
 !MESSAGE exists = true open = true => deleted = false
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:29:00.974
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.JKBvIdGM => OK
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:38:04.353
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.akWdnDRE => OK
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:29:00.988
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:38:04.367
 !MESSAGE classpath=67 entries
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:29:00.996
-!MESSAGE buffering callback sts4.classpath.JKBvIdGM demo false 67
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:38:04.375
+!MESSAGE buffering callback sts4.classpath.akWdnDRE demo false 67
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:29:00.997
-!MESSAGE executing callback sts4.classpath.JKBvIdGM 1 batched events
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:38:04.377
+!MESSAGE executing callback sts4.classpath.akWdnDRE 1 batched events
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 15:29:01.854
-!MESSAGE executing callback sts4.classpath.JKBvIdGM SUCCESS [done]
-
-!ENTRY org.eclipse.ui 4 0 2022-08-04 15:32:20.858
-!MESSAGE Unhandled event loop exception
-!STACK 0
-org.eclipse.swt.SWTException: Graphic is disposed
-	at org.eclipse.swt.SWT.error(SWT.java:4893)
-	at org.eclipse.swt.SWT.error(SWT.java:4808)
-	at org.eclipse.swt.SWT.error(SWT.java:4779)
-	at org.eclipse.swt.graphics.Image.getImageData(Image.java:1367)
-	at org.eclipse.swt.internal.ImageList.set(ImageList.java:365)
-	at org.eclipse.swt.internal.ImageList.add(ImageList.java:52)
-	at org.eclipse.swt.widgets.Tree.imageIndex(Tree.java:3671)
-	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7360)
-	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5807)
-	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1961)
-	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5375)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4809)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4966)
-	at org.eclipse.swt.internal.win32.OS.CallWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1542)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4854)
-	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:5979)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4966)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3624)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-	Suppressed: org.eclipse.swt.SWTException: Graphic is disposed
-		at org.eclipse.swt.SWT.error(SWT.java:4893)
-		at org.eclipse.swt.SWT.error(SWT.java:4808)
-		at org.eclipse.swt.SWT.error(SWT.java:4779)
-		at org.eclipse.swt.graphics.Image.getBounds(Image.java:1262)
-		at org.eclipse.swt.widgets.Tree.CDDS_ITEMPOSTPAINT(Tree.java:759)
-		at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7388)
-		... 33 more
-	Suppressed: org.eclipse.swt.SWTException: Graphic is disposed
-		... 41 more
-	Suppressed: org.eclipse.swt.SWTException: Graphic is disposed
-		at org.eclipse.swt.SWT.error(SWT.java:4893)
-		at org.eclipse.swt.SWT.error(SWT.java:4808)
-		at org.eclipse.swt.SWT.error(SWT.java:4779)
-		at org.eclipse.swt.graphics.Image.getBounds(Image.java:1262)
-		at org.eclipse.swt.widgets.Tree.CDDS_ITEMPOSTPAINT(Tree.java:759)
-		at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7388)
-		... 33 more
-	Suppressed: org.eclipse.swt.SWTException: Graphic is disposed
-		... 41 more
-	Suppressed: org.eclipse.swt.SWTException: Graphic is disposed
-		at org.eclipse.swt.SWT.error(SWT.java:4893)
-		at org.eclipse.swt.SWT.error(SWT.java:4808)
-		at org.eclipse.swt.SWT.error(SWT.java:4779)
-		at org.eclipse.swt.graphics.Image.getBounds(Image.java:1262)
-		at org.eclipse.swt.widgets.Tree.CDDS_ITEMPOSTPAINT(Tree.java:759)
-		at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7388)
-		... 33 more
-	Suppressed: org.eclipse.swt.SWTException: Graphic is disposed
-		... 41 more
-	Suppressed: org.eclipse.swt.SWTException: Graphic is disposed
-		at org.eclipse.swt.SWT.error(SWT.java:4893)
-		at org.eclipse.swt.SWT.error(SWT.java:4808)
-		at org.eclipse.swt.SWT.error(SWT.java:4779)
-		at org.eclipse.swt.graphics.Image.getBounds(Image.java:1262)
-		at org.eclipse.swt.widgets.Tree.CDDS_ITEMPOSTPAINT(Tree.java:759)
-		at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7388)
-		... 33 more
-
-!ENTRY org.eclipse.jface 2 0 2022-08-04 15:35:04.981
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-04 15:35:04.981
-!MESSAGE A conflict occurred for CTRL+SHIFT+C:
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
-		,
-		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@227c178e,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
-		,
-		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@306465c8,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-!SESSION 2022-08-04 16:11:40.708 -----------------------------------------------
-eclipse.buildId=4.21.0.I20210906-0500
-java.version=16.0.2
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jface 2 0 2022-08-04 16:11:55.022
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-04 16:11:55.022
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@69fa5536,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ee5792a,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-04 16:11:55.022
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@37f60cd4,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4cf46574,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:01.936
-!MESSAGE Entering DelegatingStreamConnectionProvider()
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:01.938
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@40ee7196[org.springframework.tooling.boot.ls:1.36.0.202206171137(id=1043)]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:01.942
-!MESSAGE SpringBootLanguageServer exists!
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:02.019
-!MESSAGE Instantiating ReusableClasspathListenerHandler
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-04 16:12:04.282
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-04 16:12:04.283
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.egit.ui 2 0 2022-08-04 16:12:04.346
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\jin'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:06.659
-!MESSAGE Boot LS startup time from start to initialized: 4679ms
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:06.942
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.VzxQdYizisBatched = true
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:06.947
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:06.950
-!MESSAGE Scheduling initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:06.951
-!MESSAGE Scheduling initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:06.952
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.VzxQdYiz => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:06.953
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:06.965
-!MESSAGE classpath=67 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:06.971
-!MESSAGE buffering callback sts4.classpath.VzxQdYiz demo false 67
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:06.972
-!MESSAGE executing callback sts4.classpath.VzxQdYiz 1 batched events
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 16:12:07.729
-!MESSAGE executing callback sts4.classpath.VzxQdYiz SUCCESS [done]
-
-!ENTRY org.eclipse.ui 2 2 2022-08-04 16:12:46.160
-!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
-!SESSION 2022-08-04 17:20:08.298 -----------------------------------------------
-eclipse.buildId=4.21.0.I20210906-0500
-java.version=16.0.2
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.core.resources 4 567 2022-08-04 17:20:20.382
-!MESSAGE Workspace restored, but some problems occurred.
-!SUBENTRY 1 org.eclipse.core.resources 4 567 2022-08-04 17:20:20.382
-!MESSAGE Could not read metadata for '.org.eclipse.egit.core.cmp'.
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException(/.org.eclipse.egit.core.cmp)[567]: java.lang.Exception: The project description file (.project) for '.org.eclipse.egit.core.cmp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
-	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:888)
-	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:868)
-	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:724)
-	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1555)
-	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2480)
-	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2231)
-	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:475)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.lambda$2(BundleContextImpl.java:808)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:802)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:759)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1019)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
-	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
-	at org.eclipse.osgi.container.Module.start(Module.java:468)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:404)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:572)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:345)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:388)
-	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:463)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:170)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:153)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-!SUBENTRY 2 org.eclipse.core.resources 4 567 2022-08-04 17:20:20.383
-!MESSAGE The project description file (.project) for '.org.eclipse.egit.core.cmp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-!STACK 0
-java.lang.Exception: The project description file (.project) for '.org.eclipse.egit.core.cmp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
-	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:888)
-	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:868)
-	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:724)
-	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1555)
-	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2480)
-	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2231)
-	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:475)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.lambda$2(BundleContextImpl.java:808)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:802)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:759)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1019)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
-	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
-	at org.eclipse.osgi.container.Module.start(Module.java:468)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:404)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:572)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:345)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:388)
-	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:463)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:170)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:153)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-
-!ENTRY org.eclipse.jface 2 0 2022-08-04 17:20:23.622
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-04 17:20:23.622
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@40aaf656,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5a183fa6,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-04 17:20:23.622
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@167ccc3c,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@292b7a02,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:30.271
-!MESSAGE Entering DelegatingStreamConnectionProvider()
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:30.273
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6c549d8b[org.springframework.tooling.boot.ls:1.36.0.202206171137(id=1043)]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:30.277
-!MESSAGE SpringBootLanguageServer exists!
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:30.337
-!MESSAGE Instantiating ReusableClasspathListenerHandler
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-04 17:20:32.325
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-04 17:20:32.327
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.egit.ui 2 0 2022-08-04 17:20:32.381
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\jin'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:35.184
-!MESSAGE Boot LS startup time from start to initialized: 4885ms
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:35.618
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.XyZJyNZRisBatched = true
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:35.624
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:35.629
-!MESSAGE Scheduling initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:35.632
-!MESSAGE Scheduling initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:35.633
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:35.634
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.XyZJyNZR => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:35.652
-!MESSAGE classpath=67 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:35.661
-!MESSAGE buffering callback sts4.classpath.XyZJyNZR demo false 67
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:35.663
-!MESSAGE executing callback sts4.classpath.XyZJyNZR 1 batched events
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-04 17:20:36.563
-!MESSAGE executing callback sts4.classpath.XyZJyNZR SUCCESS [done]
-
-!ENTRY org.eclipse.ui 2 2 2022-08-04 17:20:43.529
-!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
-
-!ENTRY org.eclipse.jface 2 0 2022-08-04 17:49:32.978
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-04 17:49:32.978
-!MESSAGE A conflict occurred for CTRL+SHIFT+C:
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
-		,
-		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@256ec513,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
-		,
-		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2d74ce0,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-
-!ENTRY org.eclipse.ui 4 4 2022-08-04 17:49:36.669
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.findNext: {ActionHandler(org.eclipse.ui.texteditor.FindNextAction@10b2d14e)} vs {ActionHandler(org.eclipse.ui.texteditor.FindNextAction@10b2d14e)} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-!STACK 0
-java.lang.IllegalStateException: Conflicting handlers: {[ActionHandler(org.eclipse.ui.texteditor.FindNextAction@10b2d14e),  for 'org.eclipse.ui.edit.findNext',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@56f95683), active=true, sourcePriority=1048576, participating=true]} vs {[ActionHandler(org.eclipse.ui.texteditor.FindNextAction@10b2d14e),  for 'org.eclipse.ui.edit.findNext',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@56f95683), active=true, sourcePriority=1048576, participating=true]} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-	at org.eclipse.ui.internal.handlers.LegacyHandlerService$HandlerSelectionFunction.compute(LegacyHandlerService.java:145)
-	at org.eclipse.e4.core.internal.contexts.ValueComputation.get(ValueComputation.java:70)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.internalGet(EclipseContext.java:271)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.get(EclipseContext.java:237)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.lookUpHandler(HandlerServiceImpl.java:103)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.handlerChanged(E4HandlerProxy.java:114)
-	at org.eclipse.core.commands.AbstractHandler.fireHandlerChanged(AbstractHandler.java:77)
-	at org.eclipse.jface.commands.ActionHandler.lambda$0(ActionHandler.java:81)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:52)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:75)
-	at org.eclipse.jface.action.Action.setEnabled(Action.java:541)
-	at org.eclipse.ui.texteditor.FindNextAction.update(FindNextAction.java:238)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateAction(AbstractTextEditor.java:5358)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateContentDependentActions(AbstractTextEditor.java:5442)
-	at org.eclipse.ui.texteditor.AbstractTextEditor$TextListener.lambda$0(AbstractTextEditor.java:616)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-
-!ENTRY org.eclipse.ui 4 4 2022-08-04 17:49:36.672
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.findPrevious: {ActionHandler(org.eclipse.ui.texteditor.FindNextAction@4f64a692)} vs {ActionHandler(org.eclipse.ui.texteditor.FindNextAction@4f64a692)} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-!STACK 0
-java.lang.IllegalStateException: Conflicting handlers: {[ActionHandler(org.eclipse.ui.texteditor.FindNextAction@4f64a692),  for 'org.eclipse.ui.edit.findPrevious',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@56f95683), active=true, sourcePriority=1048576, participating=true]} vs {[ActionHandler(org.eclipse.ui.texteditor.FindNextAction@4f64a692),  for 'org.eclipse.ui.edit.findPrevious',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@56f95683), active=true, sourcePriority=1048576, participating=true]} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-	at org.eclipse.ui.internal.handlers.LegacyHandlerService$HandlerSelectionFunction.compute(LegacyHandlerService.java:145)
-	at org.eclipse.e4.core.internal.contexts.ValueComputation.get(ValueComputation.java:70)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.internalGet(EclipseContext.java:271)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.get(EclipseContext.java:237)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.lookUpHandler(HandlerServiceImpl.java:103)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.handlerChanged(E4HandlerProxy.java:114)
-	at org.eclipse.core.commands.AbstractHandler.fireHandlerChanged(AbstractHandler.java:77)
-	at org.eclipse.jface.commands.ActionHandler.lambda$0(ActionHandler.java:81)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:52)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:75)
-	at org.eclipse.jface.action.Action.setEnabled(Action.java:541)
-	at org.eclipse.ui.texteditor.FindNextAction.update(FindNextAction.java:238)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateAction(AbstractTextEditor.java:5358)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateContentDependentActions(AbstractTextEditor.java:5442)
-	at org.eclipse.ui.texteditor.AbstractTextEditor$TextListener.lambda$0(AbstractTextEditor.java:616)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-
-!ENTRY org.eclipse.ui 4 4 2022-08-04 17:49:36.675
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.findIncremental: {ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@7c1ceb4a)} vs {ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@7c1ceb4a)} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-!STACK 0
-java.lang.IllegalStateException: Conflicting handlers: {[ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@7c1ceb4a),  for 'org.eclipse.ui.edit.findIncremental',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@56f95683), active=true, sourcePriority=1048576, participating=true]} vs {[ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@7c1ceb4a),  for 'org.eclipse.ui.edit.findIncremental',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@56f95683), active=true, sourcePriority=1048576, participating=true]} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-	at org.eclipse.ui.internal.handlers.LegacyHandlerService$HandlerSelectionFunction.compute(LegacyHandlerService.java:145)
-	at org.eclipse.e4.core.internal.contexts.ValueComputation.get(ValueComputation.java:70)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.internalGet(EclipseContext.java:271)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.get(EclipseContext.java:237)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.lookUpHandler(HandlerServiceImpl.java:103)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.handlerChanged(E4HandlerProxy.java:114)
-	at org.eclipse.core.commands.AbstractHandler.fireHandlerChanged(AbstractHandler.java:77)
-	at org.eclipse.jface.commands.ActionHandler.lambda$0(ActionHandler.java:81)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:52)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:75)
-	at org.eclipse.jface.action.Action.setEnabled(Action.java:541)
-	at org.eclipse.ui.texteditor.IncrementalFindAction.update(IncrementalFindAction.java:118)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateAction(AbstractTextEditor.java:5358)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateContentDependentActions(AbstractTextEditor.java:5442)
-	at org.eclipse.ui.texteditor.AbstractTextEditor$TextListener.lambda$0(AbstractTextEditor.java:616)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-
-!ENTRY org.eclipse.ui 4 4 2022-08-04 17:49:36.677
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.findIncrementalReverse: {ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@6c878e01)} vs {ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@6c878e01)} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-!STACK 0
-java.lang.IllegalStateException: Conflicting handlers: {[ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@6c878e01),  for 'org.eclipse.ui.edit.findIncrementalReverse',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@56f95683), active=true, sourcePriority=1048576, participating=true]} vs {[ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@6c878e01),  for 'org.eclipse.ui.edit.findIncrementalReverse',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@56f95683), active=true, sourcePriority=1048576, participating=true]} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-	at org.eclipse.ui.internal.handlers.LegacyHandlerService$HandlerSelectionFunction.compute(LegacyHandlerService.java:145)
-	at org.eclipse.e4.core.internal.contexts.ValueComputation.get(ValueComputation.java:70)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.internalGet(EclipseContext.java:271)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.get(EclipseContext.java:237)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.lookUpHandler(HandlerServiceImpl.java:103)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.handlerChanged(E4HandlerProxy.java:114)
-	at org.eclipse.core.commands.AbstractHandler.fireHandlerChanged(AbstractHandler.java:77)
-	at org.eclipse.jface.commands.ActionHandler.lambda$0(ActionHandler.java:81)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:52)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:75)
-	at org.eclipse.jface.action.Action.setEnabled(Action.java:541)
-	at org.eclipse.ui.texteditor.IncrementalFindAction.update(IncrementalFindAction.java:118)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateAction(AbstractTextEditor.java:5358)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateContentDependentActions(AbstractTextEditor.java:5442)
-	at org.eclipse.ui.texteditor.AbstractTextEditor$TextListener.lambda$0(AbstractTextEditor.java:616)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-!SESSION 2022-08-09 13:15:14.078 -----------------------------------------------
-eclipse.buildId=4.21.0.I20210906-0500
-java.version=16.0.2
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data C:\codingPJ\backend -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jface 2 0 2022-08-09 13:15:20.460
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 13:15:20.460
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@62075e3d,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@63e81ac6,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 13:15:20.460
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@45775a15,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2396dc4e,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.jface 2 0 2022-08-09 13:15:28.365
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 13:15:28.365
-!MESSAGE A conflict occurred for CTRL+SHIFT+C:
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
-		,
-		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6112390a,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
-		,
-		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5ac92082,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-09 13:15:28.737
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-09 13:15:28.738
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.egit.ui 2 0 2022-08-09 13:15:28.804
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\jin'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.ui 2 2 2022-08-09 13:18:09.900
-!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
-!SESSION 2022-08-09 15:14:19.472 -----------------------------------------------
-eclipse.buildId=4.21.0.I20210906-0500
-java.version=16.0.2
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jface 2 0 2022-08-09 15:14:29.283
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 15:14:29.283
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@335a45a8,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@294c36b9,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 15:14:29.283
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6b23897a,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@40dd2cfe,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.jface 2 0 2022-08-09 15:14:36.172
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 15:14:36.172
-!MESSAGE A conflict occurred for CTRL+SHIFT+C:
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
-		,
-		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@12278d1c,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
-		,
-		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b232da1,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-09 15:14:36.475
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-09 15:14:36.476
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.egit.ui 2 0 2022-08-09 15:14:36.543
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\jin'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.ui 2 2 2022-08-09 15:14:55.506
-!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
-!SESSION 2022-08-09 17:33:42.619 -----------------------------------------------
-eclipse.buildId=4.21.0.I20210906-0500
-java.version=16.0.2
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data C:\codingPJ\backend -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jface 2 0 2022-08-09 17:33:49.269
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 17:33:49.269
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c682826,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@a1c4f69,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 17:33:49.269
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7a285418,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@79e33802,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-09 17:33:57.152
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-09 17:33:57.155
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.egit.ui 2 0 2022-08-09 17:33:57.213
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\jin'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.ui 2 2 2022-08-09 17:34:09.702
-!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:39.120
-!MESSAGE Entering DelegatingStreamConnectionProvider()
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:39.121
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@22d65cc2[org.springframework.tooling.boot.ls:1.36.0.202206171137(id=1043)]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:39.125
-!MESSAGE SpringBootLanguageServer exists!
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:39.163
-!MESSAGE Instantiating ReusableClasspathListenerHandler
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:43.350
-!MESSAGE Boot LS startup time from start to initialized: 4212ms
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:43.645
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.TsJsShlQisBatched = true
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:43.649
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:43.653
-!MESSAGE Scheduling initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:43.655
-!MESSAGE Scheduling initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:43.656
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:43.656
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.TsJsShlQ => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:43.667
-!MESSAGE classpath=68 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:43.673
-!MESSAGE buffering callback sts4.classpath.TsJsShlQ demo false 68
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:43.674
-!MESSAGE executing callback sts4.classpath.TsJsShlQ 1 batched events
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:34:44.385
-!MESSAGE executing callback sts4.classpath.TsJsShlQ SUCCESS [done]
-
-!ENTRY org.eclipse.jface 2 0 2022-08-09 17:34:55.171
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 17:34:55.172
-!MESSAGE A conflict occurred for CTRL+SHIFT+C:
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
-		,
-		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@368f2959,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
-		,
-		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@41bbdb8d,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-!SESSION 2022-08-09 17:36:34.550 -----------------------------------------------
-eclipse.buildId=4.21.0.I20210906-0500
-java.version=16.0.2
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jface 2 0 2022-08-09 17:36:48.344
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 17:36:48.344
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7d2ddbf3,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4eee730c,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 17:36:48.344
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b1d1558,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6cc022ac,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:36:55.873
-!MESSAGE Entering DelegatingStreamConnectionProvider()
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:36:55.874
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@3a7535f7[org.springframework.tooling.boot.ls:1.36.0.202206171137(id=1043)]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:36:55.878
-!MESSAGE SpringBootLanguageServer exists!
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:36:55.935
-!MESSAGE Instantiating ReusableClasspathListenerHandler
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-09 17:36:57.935
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-09 17:36:57.936
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.egit.ui 2 0 2022-08-09 17:36:57.993
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\jin'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:37:00.749
-!MESSAGE Boot LS startup time from start to initialized: 4849ms
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:37:01.051
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.NhauEdlFisBatched = true
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:37:01.057
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:37:01.062
-!MESSAGE Scheduling initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:37:01.063
-!MESSAGE Scheduling initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:37:01.064
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:37:01.065
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.NhauEdlF => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:37:01.078
-!MESSAGE classpath=68 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:37:01.083
-!MESSAGE buffering callback sts4.classpath.NhauEdlF demo false 68
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:37:01.084
-!MESSAGE executing callback sts4.classpath.NhauEdlF 1 batched events
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:37:01.806
-!MESSAGE executing callback sts4.classpath.NhauEdlF SUCCESS [done]
-
-!ENTRY org.eclipse.lsp4e 2 0 2022-08-09 17:38:16.102
-!MESSAGE Javadoc unavailable. Failed to obtain it.
-!STACK 0
-java.lang.InterruptedException
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2092)
-	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
-	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
-	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
-
-!ENTRY org.eclipse.jface 2 0 2022-08-09 17:38:21.761
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 17:38:21.761
-!MESSAGE A conflict occurred for CTRL+SHIFT+C:
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
-		,
-		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@27169a80,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
-		,
-		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4975af1,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-
-!ENTRY org.eclipse.ui 2 2 2022-08-09 17:38:43.961
-!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
-!SESSION 2022-08-09 17:48:44.758 -----------------------------------------------
-eclipse.buildId=4.21.0.I20210906-0500
-java.version=16.0.2
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data C:\codingPJ\backend -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jface 2 0 2022-08-09 17:48:51.355
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 17:48:51.355
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5ae6119b,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@31b6eec8,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 17:48:51.355
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3abd7b20,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@329a27ae,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:48:59.213
-!MESSAGE Entering DelegatingStreamConnectionProvider()
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:48:59.215
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@da48fad[org.springframework.tooling.boot.ls:1.36.0.202206171137(id=1043)]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:48:59.220
-!MESSAGE SpringBootLanguageServer exists!
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:48:59.281
-!MESSAGE Instantiating ReusableClasspathListenerHandler
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-09 17:49:01.339
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-09 17:49:01.341
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.egit.ui 2 0 2022-08-09 17:49:01.403
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\jin'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:49:04.114
-!MESSAGE Boot LS startup time from start to initialized: 4870ms
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:49:04.449
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.FOmfZuvYisBatched = true
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:49:04.455
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:49:04.459
-!MESSAGE Scheduling initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:49:04.460
-!MESSAGE Scheduling initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:49:04.461
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:49:04.462
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.FOmfZuvY => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:49:04.472
-!MESSAGE classpath=68 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:49:04.478
-!MESSAGE buffering callback sts4.classpath.FOmfZuvY demo false 68
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:49:04.479
-!MESSAGE executing callback sts4.classpath.FOmfZuvY 1 batched events
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-09 17:49:05.244
-!MESSAGE executing callback sts4.classpath.FOmfZuvY SUCCESS [done]
-
-!ENTRY org.eclipse.jface 2 0 2022-08-09 17:50:03.946
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-09 17:50:03.946
-!MESSAGE A conflict occurred for CTRL+SHIFT+C:
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
-		,
-		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c00809b,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
-		,
-		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@555df150,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-
-!ENTRY org.eclipse.ui 2 2 2022-08-09 17:59:19.087
-!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
-!SESSION 2022-08-10 14:04:35.069 -----------------------------------------------
-eclipse.buildId=4.21.0.I20210906-0500
-java.version=16.0.2
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jface 2 0 2022-08-10 14:05:37.062
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-10 14:05:37.062
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2bab1821,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7f6137fb,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-10 14:05:37.062
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@57657b96,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@179f30b7,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.jface 2 0 2022-08-10 14:05:46.690
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-10 14:05:46.691
-!MESSAGE A conflict occurred for CTRL+SHIFT+C:
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
-		,
-		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@54c78734,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
-		,
-		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7cfe97db,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-10 14:05:47.049
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-10 14:05:47.050
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.egit.ui 2 0 2022-08-10 14:05:47.150
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\jin'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.ui 2 2 2022-08-10 14:10:32.210
-!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:13.805
-!MESSAGE Entering DelegatingStreamConnectionProvider()
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:13.807
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@71e61ba7[org.springframework.tooling.boot.ls:1.36.0.202206171137(id=1043)]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:13.826
-!MESSAGE SpringBootLanguageServer exists!
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:14.222
-!MESSAGE Instantiating ReusableClasspathListenerHandler
-
-!ENTRY org.eclipse.lsp4e 4 0 2022-08-10 14:11:21.842
-!MESSAGE 
-!STACK 0
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1956)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2091)
-	at org.eclipse.lsp4e.jdt.LSJavaCompletionProposalComputer.asJavaProposals(LSJavaCompletionProposalComputer.java:87)
-	at org.eclipse.lsp4e.jdt.LSJavaCompletionProposalComputer.computeCompletionProposals(LSJavaCompletionProposalComputer.java:55)
-	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:348)
-	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:340)
-	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.collectProposals(ContentAssistProcessor.java:333)
-	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.computeCompletionProposals(ContentAssistProcessor.java:289)
-	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$10(AsyncCompletionProposalPopup.java:352)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$9(AsyncCompletionProposalPopup.java:351)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1764)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1756)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:295)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-
-!ENTRY org.eclipse.lsp4e 4 0 2022-08-10 14:11:26.522
-!MESSAGE 
-!STACK 0
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1956)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2091)
-	at org.eclipse.lsp4e.jdt.LSJavaCompletionProposalComputer.asJavaProposals(LSJavaCompletionProposalComputer.java:87)
-	at org.eclipse.lsp4e.jdt.LSJavaCompletionProposalComputer.computeCompletionProposals(LSJavaCompletionProposalComputer.java:55)
-	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:348)
-	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:340)
-	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.collectProposals(ContentAssistProcessor.java:333)
-	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.computeCompletionProposals(ContentAssistProcessor.java:289)
-	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$10(AsyncCompletionProposalPopup.java:352)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$9(AsyncCompletionProposalPopup.java:351)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1764)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1756)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:295)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:30.164
-!MESSAGE Boot LS startup time from start to initialized: 16323ms
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:31.811
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.LmQjqgTNisBatched = true
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:31.816
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:31.821
-!MESSAGE Scheduling initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:31.823
-!MESSAGE Scheduling initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:31.824
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:31.826
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.LmQjqgTN => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:31.879
-!MESSAGE classpath=68 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:31.887
-!MESSAGE buffering callback sts4.classpath.LmQjqgTN demo false 68
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:31.888
-!MESSAGE executing callback sts4.classpath.LmQjqgTN 1 batched events
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:11:32.755
-!MESSAGE executing callback sts4.classpath.LmQjqgTN SUCCESS [done]
-
-!ENTRY org.eclipse.ui 4 4 2022-08-10 14:16:52.260
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.findNext: {ActionHandler(org.eclipse.ui.texteditor.FindNextAction@1cf74e23)} vs {ActionHandler(org.eclipse.ui.texteditor.FindNextAction@1cf74e23)} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-!STACK 0
-java.lang.IllegalStateException: Conflicting handlers: {[ActionHandler(org.eclipse.ui.texteditor.FindNextAction@1cf74e23),  for 'org.eclipse.ui.edit.findNext',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@63d14180), active=true, sourcePriority=1048576, participating=true]} vs {[ActionHandler(org.eclipse.ui.texteditor.FindNextAction@1cf74e23),  for 'org.eclipse.ui.edit.findNext',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@63d14180), active=true, sourcePriority=1048576, participating=true]} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-	at org.eclipse.ui.internal.handlers.LegacyHandlerService$HandlerSelectionFunction.compute(LegacyHandlerService.java:145)
-	at org.eclipse.e4.core.internal.contexts.ValueComputation.get(ValueComputation.java:70)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.internalGet(EclipseContext.java:271)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.get(EclipseContext.java:237)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.lookUpHandler(HandlerServiceImpl.java:103)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.handlerChanged(E4HandlerProxy.java:114)
-	at org.eclipse.core.commands.AbstractHandler.fireHandlerChanged(AbstractHandler.java:77)
-	at org.eclipse.jface.commands.ActionHandler.lambda$0(ActionHandler.java:81)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:52)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:75)
-	at org.eclipse.jface.action.Action.setEnabled(Action.java:541)
-	at org.eclipse.ui.texteditor.FindNextAction.update(FindNextAction.java:238)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateAction(AbstractTextEditor.java:5358)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateContentDependentActions(AbstractTextEditor.java:5442)
-	at org.eclipse.ui.texteditor.AbstractTextEditor$TextListener.lambda$0(AbstractTextEditor.java:616)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-
-!ENTRY org.eclipse.ui 4 4 2022-08-10 14:16:52.300
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.findPrevious: {ActionHandler(org.eclipse.ui.texteditor.FindNextAction@3e00055b)} vs {ActionHandler(org.eclipse.ui.texteditor.FindNextAction@3e00055b)} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-!STACK 0
-java.lang.IllegalStateException: Conflicting handlers: {[ActionHandler(org.eclipse.ui.texteditor.FindNextAction@3e00055b),  for 'org.eclipse.ui.edit.findPrevious',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@63d14180), active=true, sourcePriority=1048576, participating=true]} vs {[ActionHandler(org.eclipse.ui.texteditor.FindNextAction@3e00055b),  for 'org.eclipse.ui.edit.findPrevious',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@63d14180), active=true, sourcePriority=1048576, participating=true]} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-	at org.eclipse.ui.internal.handlers.LegacyHandlerService$HandlerSelectionFunction.compute(LegacyHandlerService.java:145)
-	at org.eclipse.e4.core.internal.contexts.ValueComputation.get(ValueComputation.java:70)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.internalGet(EclipseContext.java:271)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.get(EclipseContext.java:237)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.lookUpHandler(HandlerServiceImpl.java:103)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.handlerChanged(E4HandlerProxy.java:114)
-	at org.eclipse.core.commands.AbstractHandler.fireHandlerChanged(AbstractHandler.java:77)
-	at org.eclipse.jface.commands.ActionHandler.lambda$0(ActionHandler.java:81)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:52)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:75)
-	at org.eclipse.jface.action.Action.setEnabled(Action.java:541)
-	at org.eclipse.ui.texteditor.FindNextAction.update(FindNextAction.java:238)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateAction(AbstractTextEditor.java:5358)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateContentDependentActions(AbstractTextEditor.java:5442)
-	at org.eclipse.ui.texteditor.AbstractTextEditor$TextListener.lambda$0(AbstractTextEditor.java:616)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-
-!ENTRY org.eclipse.ui 4 4 2022-08-10 14:16:52.304
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.findIncremental: {ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@793df843)} vs {ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@793df843)} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-!STACK 0
-java.lang.IllegalStateException: Conflicting handlers: {[ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@793df843),  for 'org.eclipse.ui.edit.findIncremental',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@63d14180), active=true, sourcePriority=1048576, participating=true]} vs {[ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@793df843),  for 'org.eclipse.ui.edit.findIncremental',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@63d14180), active=true, sourcePriority=1048576, participating=true]} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-	at org.eclipse.ui.internal.handlers.LegacyHandlerService$HandlerSelectionFunction.compute(LegacyHandlerService.java:145)
-	at org.eclipse.e4.core.internal.contexts.ValueComputation.get(ValueComputation.java:70)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.internalGet(EclipseContext.java:271)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.get(EclipseContext.java:237)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.lookUpHandler(HandlerServiceImpl.java:103)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.handlerChanged(E4HandlerProxy.java:114)
-	at org.eclipse.core.commands.AbstractHandler.fireHandlerChanged(AbstractHandler.java:77)
-	at org.eclipse.jface.commands.ActionHandler.lambda$0(ActionHandler.java:81)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:52)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:75)
-	at org.eclipse.jface.action.Action.setEnabled(Action.java:541)
-	at org.eclipse.ui.texteditor.IncrementalFindAction.update(IncrementalFindAction.java:118)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateAction(AbstractTextEditor.java:5358)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateContentDependentActions(AbstractTextEditor.java:5442)
-	at org.eclipse.ui.texteditor.AbstractTextEditor$TextListener.lambda$0(AbstractTextEditor.java:616)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-
-!ENTRY org.eclipse.ui 4 4 2022-08-10 14:16:52.308
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.findIncrementalReverse: {ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@76133187)} vs {ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@76133187)} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-!STACK 0
-java.lang.IllegalStateException: Conflicting handlers: {[ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@76133187),  for 'org.eclipse.ui.edit.findIncrementalReverse',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@63d14180), active=true, sourcePriority=1048576, participating=true]} vs {[ActionHandler(org.eclipse.ui.texteditor.IncrementalFindAction@76133187),  for 'org.eclipse.ui.edit.findIncrementalReverse',  in PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext, activeWhen=ActivePartExpression(org.eclipse.mylyn.internal.wikitext.ui.editor.MarkupEditor@63d14180), active=true, sourcePriority=1048576, participating=true]} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.mylyn.wikitext.ui.editor.markupEditorContext
-	at org.eclipse.ui.internal.handlers.LegacyHandlerService$HandlerSelectionFunction.compute(LegacyHandlerService.java:145)
-	at org.eclipse.e4.core.internal.contexts.ValueComputation.get(ValueComputation.java:70)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.internalGet(EclipseContext.java:271)
-	at org.eclipse.e4.core.internal.contexts.EclipseContext.get(EclipseContext.java:237)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.lookUpHandler(HandlerServiceImpl.java:103)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.handlerChanged(E4HandlerProxy.java:114)
-	at org.eclipse.core.commands.AbstractHandler.fireHandlerChanged(AbstractHandler.java:77)
-	at org.eclipse.jface.commands.ActionHandler.lambda$0(ActionHandler.java:81)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:52)
-	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:75)
-	at org.eclipse.jface.action.Action.setEnabled(Action.java:541)
-	at org.eclipse.ui.texteditor.IncrementalFindAction.update(IncrementalFindAction.java:118)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateAction(AbstractTextEditor.java:5358)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.updateContentDependentActions(AbstractTextEditor.java:5442)
-	at org.eclipse.ui.texteditor.AbstractTextEditor$TextListener.lambda$0(AbstractTextEditor.java:616)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:19:33.566
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:19:33.580
-!MESSAGE classpath=96 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:19:33.588
-!MESSAGE buffering callback sts4.classpath.LmQjqgTN demo false 96
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:19:33.589
-!MESSAGE executing callback sts4.classpath.LmQjqgTN 1 batched events
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:19:34.062
-!MESSAGE executing callback sts4.classpath.LmQjqgTN SUCCESS [done]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:20:26.121
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:20:26.138
-!MESSAGE classpath=96 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:20:26.150
-!MESSAGE buffering callback sts4.classpath.LmQjqgTN demo false 96
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:20:26.151
-!MESSAGE executing callback sts4.classpath.LmQjqgTN 1 batched events
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:20:26.194
-!MESSAGE executing callback sts4.classpath.LmQjqgTN SUCCESS [done]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:21:24.128
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.LmQjqgTN
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:21:24.129
-!MESSAGE unsubscribing from classpath changes: sts4.classpath.LmQjqgTN
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:21:24.131
-!MESSAGE subsribers = {}
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:21:24.132
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.LmQjqgTN => OK
-
-!ENTRY Activator 4 0 2022-08-10 14:23:26.651
-!MESSAGE NullPointerException: Cannot invoke "org.springsource.ide.eclipse.commons.livexp.core.LiveSetVariable.getValue()" because the return value of "org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel.access$2(org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel)" is null
-!STACK 0
-java.lang.NullPointerException: Cannot invoke "org.springsource.ide.eclipse.commons.livexp.core.LiveSetVariable.getValue()" because the return value of "org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel.access$2(org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel)" is null
-	at org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel$2.bundleChanged(LocalBootDashModel.java:153)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:935)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:228)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:339)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:24:55.458
-!MESSAGE Entering DelegatingStreamConnectionProvider()
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:24:55.459
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@71e61ba7[org.springframework.tooling.boot.ls:1.36.0.202206171137(id=1043)]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:24:55.461
-!MESSAGE SpringBootLanguageServer exists!
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:00.017
-!MESSAGE Boot LS startup time from start to initialized: 4553ms
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:00.310
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.nIDGHtwsisBatched = true
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:00.312
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:00.313
-!MESSAGE Scheduling initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:00.314
-!MESSAGE Scheduling initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:00.315
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:00.316
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.nIDGHtws => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:00.332
-!MESSAGE classpath=96 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:00.341
-!MESSAGE buffering callback sts4.classpath.nIDGHtws demo false 96
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:00.341
-!MESSAGE executing callback sts4.classpath.nIDGHtws 1 batched events
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:01.209
-!MESSAGE executing callback sts4.classpath.nIDGHtws SUCCESS [done]
-
-!ENTRY org.eclipse.jface.text 4 2 2022-08-10 14:25:33.684
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface.text".
-!STACK 0
-java.lang.NullPointerException: Cannot invoke "org.eclipse.equinox.log.ExtendedLogReaderService.addLogListener(org.osgi.service.log.LogListener, org.eclipse.equinox.log.LogFilter)" because "logReader" is null
-	at org.eclipse.core.internal.runtime.InternalPlatform.lambda$11(InternalPlatform.java:363)
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
-	at org.eclipse.core.internal.runtime.InternalPlatform.getLog(InternalPlatform.java:358)
-	at org.eclipse.core.runtime.Plugin.getLog(Plugin.java:237)
-	at org.eclipse.jdt.internal.ui.JavaPlugin.log(JavaPlugin.java:324)
-	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalComputerRegistry.informUser(CompletionProposalComputerRegistry.java:449)
-	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:371)
-	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:340)
-	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.collectProposals(ContentAssistProcessor.java:333)
-	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.computeCompletionProposals(ContentAssistProcessor.java:289)
-	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$10(AsyncCompletionProposalPopup.java:352)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$9(AsyncCompletionProposalPopup.java:351)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1764)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1756)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:295)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-!SESSION 2022-08-10 14:25:38.434 -----------------------------------------------
-eclipse.buildId=4.21.0.I20210906-0500
-java.version=16.0.2
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jface 2 0 2022-08-10 14:25:49.723
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-10 14:25:49.723
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7f6137fb,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@57657b96,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-10 14:25:49.723
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@179f30b7,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@64864875,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:58.187
-!MESSAGE Entering DelegatingStreamConnectionProvider()
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:58.188
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@655cba2c[org.springframework.tooling.boot.ls:1.36.0.202206171137(id=1043)]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:58.193
-!MESSAGE SpringBootLanguageServer exists!
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:25:58.288
-!MESSAGE Instantiating ReusableClasspathListenerHandler
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-10 14:26:00.869
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.ui.navigator 2 0 2022-08-10 14:26:00.870
-!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
-
-!ENTRY org.eclipse.egit.ui 2 0 2022-08-10 14:26:00.930
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\jin'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:26:03.351
-!MESSAGE Boot LS startup time from start to initialized: 5115ms
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:26:03.741
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ShaDOjzxisBatched = true
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:26:03.748
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:26:03.753
-!MESSAGE Scheduling initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:26:03.755
-!MESSAGE Scheduling initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:26:03.756
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:26:03.757
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ShaDOjzx => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:26:03.775
-!MESSAGE classpath=96 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:26:03.784
-!MESSAGE buffering callback sts4.classpath.ShaDOjzx demo false 96
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:26:03.785
-!MESSAGE executing callback sts4.classpath.ShaDOjzx 1 batched events
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 14:26:04.820
-!MESSAGE executing callback sts4.classpath.ShaDOjzx SUCCESS [done]
-
-!ENTRY org.eclipse.ui 2 2 2022-08-10 14:26:22.650
-!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-16 15:38:05.100
+!MESSAGE executing callback sts4.classpath.akWdnDRE SUCCESS [done]

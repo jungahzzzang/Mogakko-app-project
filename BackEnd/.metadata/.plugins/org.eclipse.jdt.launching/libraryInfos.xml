@@ -2,4 +2,6 @@
 <libraryInfos>
     <libraryInfo home="C:\eclipse-jee-2021-09-R-win32-x86_64\eclipsee\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149" version="16.0.2"/>
     <libraryInfo home="C:\eclipse-jee-2021-09-R-win32-x86_64\eclipsee\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre" version="16.0.2"/>
+    <libraryInfo home="C:\Program Files\java-17-openjdk-17.0.3.0.6-1.win.x86_64" version="17.0.3"/>
+    <libraryInfo home="C:\Program Files\jdk-17" version="17"/>
 </libraryInfos>
