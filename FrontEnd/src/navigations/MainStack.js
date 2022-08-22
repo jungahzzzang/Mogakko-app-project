@@ -1,8 +1,10 @@
 import React, {useContext, useState} from "react";
 import { ThemeContext } from "styled-components";
 import { createStackNavigator } from "@react-navigation/stack";
-import { StudyChat, ChatCreation } from "../screens";
-import MainTab from './MainTab';
+//import { StudyChat, ChatCreation } from "../screens";
+import StudyChat from "../screens/StudyChat";
+import ChatCreation from "../screens/ChatCreation";
+import MainTab from "./MainTab";
 
 const Stack = createStackNavigator();
 
@@ -15,11 +17,12 @@ const MainStack = () => {
             initialRouteName="Main"
             screenOptions={{
                 headerTitleAlign: 'center',
-                //headerTintColor: theme.headerTintColor,
-                //cardStyle: {backgroundColor: theme.backgroundColor},
+                headerTintColor: theme.headerTintColor,
+                cardStyle: {backgroundColor: theme.backgroundColor},
                 headerBackTitleVisible: false,
             }}
         >
+        
             <Stack.Screen name="Main" component={MainTab} />
             <Stack.Screen name="Chat Creation" component={ChatCreation} />
             <Stack.Screen name="Chat" component={StudyChat} />

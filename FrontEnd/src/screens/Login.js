@@ -4,18 +4,18 @@ import { Text, Button } from "react-native";
 
 const Container = styled.View`
     flex: 1;
+    justify-content: center;
+    align-items: center;
     background-color: ${({theme}) => theme.background};
 `;
 
-const ChatCreation = ({navigation}) => {
-    return (
+const Login = ({navigation}) => {
+    return(
         <Container>
-            <Text styled={{fontSize: 24}}>채팅방 생성</Text>
-            <Button title="채팅방 만들기" onPress={() => navigation.navigate('Chat')} />
+            <Text style={{fontSize: 30}}>Login Page</Text>
+            <Button title="Signup" onPress={()=>navigation.navigate('Signup')} />
         </Container>
     );
 };
 
-
-
-export default ChatCreation;
+export default Login;

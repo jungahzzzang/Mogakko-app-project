@@ -1,7 +1,8 @@
-import Home from "./Home";
-import ChatCreation from "./ChatCreation";
-import Mypage from "./Mypage";
+import Login from "./Login"
+import Signup from "./Signup";
 import StudyChat from "./StudyChat";
+import ChatCreation from "./ChatCreation";
 import StudyChatList from "./StudyChatList";
+import Mypage from "./Mypage";
 
-export {Home, ChatCreation, Mypage, StudyChat, StudyChatList};
+export {Login, Signup, StudyChat, ChatCreation, StudyChatList, Mypage};

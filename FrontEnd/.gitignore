@@ -12,5 +12,8 @@ web-build/
 
 # macOS
 .DS_Store
+<<<<<<< HEAD
 
 node_modules
+=======
+>>>>>>> 8e0ec0651d51ef645dc46af04d73e2596dbbb329

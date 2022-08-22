@@ -4,16 +4,17 @@ import { Text } from "react-native";
 
 const Container = styled.View`
     flex: 1;
+    justify-content: center;
+    align-items: center;
     background-color: ${({theme}) => theme.background};
 `;
 
-const Mypage = () => {
+const Signup = () => {
     return(
         <Container>
-            <Text style={{fontSize: 24}}>마이 페이지</Text>
-            
+            <Text style={{fontSize: 30}}>Signup Page</Text>
         </Container>
     );
 };
 
-export default Mypage;
+export default Signup;

@@ -7,10 +7,10 @@ const colors = {
     pink: '#FFACB3',
     red: '#e84118',
     blue: '#3679fe',
-}
+};
 
 export const theme = {
-    background: colors.white,
+    background: colors.green,
     text: colors.black,
     errorText: colors.red,
 
@@ -24,4 +24,7 @@ export const theme = {
     buttonLogout: colors.pink,
 
     //Navigation
-}
+    headerTintColor: colors.black,
+    tabActiveColor: colors.blue,
+    tabInactiveColor: colors.grey_1,
+};
