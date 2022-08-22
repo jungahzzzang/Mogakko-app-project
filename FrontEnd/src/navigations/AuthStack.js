@@ -1,14 +1,20 @@
 import React, {useContext} from "react";
 import { ThemeContext } from "styled-components";
 import { createStackNavigator } from '@react-navigation/stack';
-import Login from "../screens/Login";
-import Signup from "../screens/Signup";
+import KakaoLoginScreen from "../components/KakaoLoginScreen";
 
 const Stack = createStackNavigator();
 
+// const screenOptions = {
+//     headerShown: false,
+// };
+
 const AuthStack = () => {
+
     const theme = useContext(ThemeContext);
+
     return(
+    
         <Stack.Navigator
             initialRouteName="Login"
             screenOptions={{
@@ -16,9 +22,10 @@ const AuthStack = () => {
                 cardStyle: {backgroundColor: theme.backgroundColor},
             }}
         >
-            <Stack.Screen name="Login" component={Login} />
-            <Stack.Screen name="Signup" component={Signup} />
+           
+            <Stack.Screen name="KakaoLoginScreen" component={KakaoLoginScreen} />
         </Stack.Navigator>
+ 
     );
 };
 

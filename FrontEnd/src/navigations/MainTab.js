@@ -34,7 +34,7 @@ const MainTab = () => {
                     tabBarIcon :({ focused }) =>
                     TabBarIcon({
                         focused,
-                        name: focused ? 'Code' : 'IntegrationInstructions',
+                        name: focused ? 'code' : 'developer-mode',
                     }),
                 }}
             />

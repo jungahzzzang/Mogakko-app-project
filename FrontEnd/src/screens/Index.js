@@ -5,4 +5,4 @@ import ChatCreation from "./ChatCreation";
 import StudyChatList from "./StudyChatList";
 import Mypage from "./Mypage";
 
-export {Login, Signup, StudyChat, ChatCreation, StudyChatList, Mypage};
+export {Login, Signup, StudyChat, ChatCreation, StudyChatList, Mypage };
