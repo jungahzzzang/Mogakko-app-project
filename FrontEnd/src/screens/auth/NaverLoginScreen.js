@@ -1,16 +1,17 @@
 import React from "react";
 import ScreenContainer from "../../components/ScreenContainer";
-import {Webview} from "react-native-webview";
+import {WebView} from "react-native-webview";
+import {NAVER_AUTH_URL} from "../../utils/OAuth";
 
 const INJECTED_JAVASCRIPT = `window.ReactNativeWebView.postMessage('message from webView')`;
 
 const NaverLoginScreen = () => {
     return (
         <ScreenContainer style={{flex: 1}}>
-            <Webview
+            <WebView
                 originWhitelist={['*']}
                 scalesPageToFit={true}
-                source={{uri: 'http://localhost8080//oauth2/authorization/naver'}}   
+                source={{uri: NAVER_AUTH_URL}}   
                 javaScriptEnabled={true}
                 injectedJavaScript={INJECTED_JAVASCRIPT}
                 onMessage={
