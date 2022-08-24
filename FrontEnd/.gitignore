@@ -16,4 +16,4 @@ web-build/
 node_modules
 
 # 소셜 로그인 api 키
-*/utils/OAuth.js
+OAuth.js
