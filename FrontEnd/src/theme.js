@@ -3,8 +3,8 @@ const colors = {
     black: '#000000',
     grey_0: '#d5d5d5',
     grey_1: '#a6a6a6',
-    green: '#215034',
-    pink: '#FFACB3',
+    green: '#1D5349',
+    pink: '#F5B4A7',
     red: '#e84118',
     blue: '#3679fe',
 };

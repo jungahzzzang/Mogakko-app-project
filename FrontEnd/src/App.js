@@ -19,6 +19,7 @@ const App = () => {
     //     </ThemeProvider>
     // );
 
+
     return (
         <ThemeProvider theme={theme}>
             <StatusBar barStyle="dark-content"/>

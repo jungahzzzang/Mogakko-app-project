@@ -1,5 +1,7 @@
-import KakaoButton from "../../assets/kakao_login_button.png";
-import NaverButton from "../../assets/naver_login_button.png";
-import GithubButton from "../../assets/github_login_icon.png";
+import KakaoLogo from '../../assets/image/login/kakao.svg';
+import NaverLogo from '../../assets/image/login/naver.svg';
+import GithubLogo from '../../assets/image/login/github.svg';
+import GreenLogo from '../../assets/image/logo/mogakko_logo_green.png';
+import PinkLogo from '../../assets/image/logo/mogakko_logo_pink.png';
 
-export {KakaoButton, NaverButton, GithubButton};
+export {KakaoLogo, NaverLogo, GithubLogo, PinkLogo, GreenLogo};
