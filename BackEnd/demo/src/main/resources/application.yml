@@ -7,25 +7,69 @@ server:
       enabled: true
       force: true
     
-#spring:
-#  mvc:
-#    view:
-#      prefix: /WEB-INF/views/
-#      suffix: .jsp
+spring:
       
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Seoul
-#    username: deannn
-#    password: deannn123
-#    
-#  jpa:
-#    open-in-view: true
-#    hibernate:
-#      ddl-auto: create
-#      naming:
-#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-#      use-new-id-generator-mappings: false
-#    show-sql: true
-#    properties:
-#      hibernate.format_sql: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(faRw/b6QbvI5Dl4PkshLP8QKObOsz+XqyeVOSxfyxwVqHkiJ3CI/0it5LOlGiyi2GO3S00IDTGC0SLIWX1bHWVuDmgkLODidy46p9NXiMCc=)
+    username: ENC(YpTbhZAFIcY=)
+    password: ENC(3o3kKxG9eUURvr11zdckkg==)
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+#OAuth
+  security:
+    oauth2.client:
+      registration:
+        github:
+          clientId: ENC(2DrFktFk2v62wwU5SmwAUOhmUql6Osgb)
+          clientSecret: ENC(2Qj9PzcMw59QStT9AgGEfBkzZDDXcOfQObDVni9sg8kXYuuC1lqIYAxiQxP9RBV+)
+        naver:
+          clientId: ENC(nReiOOFVglyz1haDn32N6SB/WlE89Jrb)
+          clientSecret: ENC(IelzAkVknGwrHavzp/PqOQ==)
+          clientAuthenticationMethod: post
+          authorizationGrantType: authorization_code
+          redirectUri: "{baseUrl}/{action}/oauth2/code/{registrationId}"
+          scope:
+            - nickname
+            - email
+            - profile_image
+          clientName: Naver
+        kakao:
+          clientId: ENC(bZz8JADFPr3Tn1FuI72AmygMS81nM7ggPEjLTY3QpM66XZjSfAXgjA==)
+          clientAuthenticationMethod: post
+          authorizationGrantType: authorization_code
+          redirectUri: "{baseUrl}/{action}/oauth2/code/{registrationId}"
+          scope:
+            - profile_nickname
+            - profile_image
+            - account_email
+          clientName: Kakao
+      # Provider 설정
+      provider:
+        naver:
+          authorizationUri: https://nid.naver.com/oauth2.0/authorize
+          tokenUri: https://nid.naver.com/oauth2.0/token
+          userInfoUri: https://openapi.naver.com/v1/nid/me
+          userNameAttribute: response
+        kakao:
+          authorizationUri: https://kauth.kakao.com/oauth/authorize
+          tokenUri: https://kauth.kakao.com/oauth/token
+          userInfoUri: https://kapi.kakao.com/v2/user/me
+          userNameAttribute: id
+
+#cors 동일
+cors:
+  allowed-origins: 'http://152.70.248.52:3000'
+  allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+  allowed-headers: '*'
+  max-age: 3600
