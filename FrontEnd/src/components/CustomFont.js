@@ -9,13 +9,13 @@ const CustomFont = ({children, style}) => {
     //font 불러오기
     useEffect(() => {
         Font.loadAsync({
-            'SpoqaHanSansNeo' : require('../../assets/fonts/SpoqaHanSansNeo-Light.ttf')
+            'Pretendard' : require('../../assets/fonts/Pretendard-Regular.ttf')
         })
         setFontLoad(true)
     },[])
 
     //배열 형식으로 폰트 fontStyle 변수에 담기
-    let fontStyle = [{fontStyle: 'SpoqaHanSansNeo'}]
+    let fontStyle = [{fontStyle: 'Pretendard'}]
     if(style){
         //style이 Array라면 concat으로 합치기
         if(Array.isArray(style)){

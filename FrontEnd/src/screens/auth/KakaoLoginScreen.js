@@ -4,10 +4,6 @@ import ScreenContainer from '../../components/ScreenContainer';
 import {KAKAO_AUTH_URL} from '../../utils/OAuth';
 //import * as SecureStore from 'expo-secure-store';
 
-// const INJECTED_JAVASCRIPT = `(function() {
-//     window.ReactNativeWebView.postMessage(window.document.body.querySelector('pre').innerHTML);
-// })();`;
-
 // const runFirst = `window.ReactNativeWebView.postMessage("this is message from web");`;
 const INJECTED_JAVASCRIPT = `window.ReactNativeWebView.postMessage('message from webView')`;
 

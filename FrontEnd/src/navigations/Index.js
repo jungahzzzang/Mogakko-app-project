@@ -12,7 +12,7 @@ const Navigation = () => {
     useEffect(() => {
         const Load = async()=>{
             await Font.loadAsync({
-                'SpoqaHanSansNeo' : require('../../assets/fonts/SpoqaHanSansNeo-Light.ttf')
+                'SpoqaHanSansNeo' : require('../../assets/fonts/Pretendard-Regular.ttf')
             })
             setFontLoad(true)
         }
