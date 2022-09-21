@@ -38,3 +38,16 @@ out/
 .vscode/
 
 .env
+
+
+## filelog
+BackEnd/demo/logs/**
+
+##project setting info#
+#FrontEnd
+FrontEnd/src/utils/OAuth.js
+
+
+#BackEnd
+BackEnd/demo/src/main/resources/*.yml
+BackEnd/demo/src/main/resources/*.xml
