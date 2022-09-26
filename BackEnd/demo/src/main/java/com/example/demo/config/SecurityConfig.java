@@ -1,32 +1,79 @@
 package com.example.demo.config;
 
 
-import com.example.demo.entity.role.Role;
-import com.example.demo.handler.OAuth2SuccessHandler;
-import com.example.demo.service.CustomOAuth2UserService;
-import com.example.demo.service.TokenService;
-import com.example.demo.util.JwtAuthFilter;
+import com.example.demo.security.jwt.JwtAccessDeniedHandler;
+import com.example.demo.security.jwt.JwtAuthenticationEntryPoint;
+import com.example.demo.security.jwt.JwtAuthenticationFilter;
+import com.example.demo.security.oauth.CookieAuthorizationRequestRepository;
+import com.example.demo.security.oauth.CustomOAuth2UserService;
+import com.example.demo.security.oauth.OAuth2AuthenticationFailureHandler;
+import com.example.demo.security.oauth.OAuth2AuthenticationSuccessHandler;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter;
-import org.springframework.security.web.DefaultSecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @RequiredArgsConstructor
 //spring security 설정 활성화
 @EnableWebSecurity
-public class SecurityConfig {
+@Log4j2
+@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
+    private final CustomOAuth2UserService customOAuth2UserService;
+    private final CookieAuthorizationRequestRepository cookieAuthorizationRequestRepository;
+    private final OAuth2AuthenticationSuccessHandler auth2AuthenticationSuccessHandler;
+    private final OAuth2AuthenticationFailureHandler auth2AuthenticationFailureHandler;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
+    private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
+    private final JwtAccessDeniedHandler jwtAccessDeniedHandler;
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/favicon.ico");
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                .antMatchers("/oauth2/**", "/auth/**").permitAll()
+                .antMatchers("/admin/**").hasRole("ADMIN");
+
+        http.cors()
+                .and()
+                .csrf().disable()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
+        http.formLogin().and()
+                .oauth2Login()
+                    .authorizationEndpoint()
+                        .baseUri("/oauth2/authorize")
+                        .authorizationRequestRepository(cookieAuthorizationRequestRepository)
+                    .and()
+                    .redirectionEndpoint()
+                        .baseUri("/oauth2/callback/*")
+                    .and()
+                    .userInfoEndpoint()
+                        .userService(customOAuth2UserService)
+                .and()
+                .successHandler(auth2AuthenticationSuccessHandler)
+                .failureHandler(auth2AuthenticationFailureHandler);
+
+        http.exceptionHandling()
+                .authenticationEntryPoint(jwtAuthenticationEntryPoint)
+                .accessDeniedHandler(jwtAccessDeniedHandler);
+
+        http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+    }
+}
+/*
     private final CustomOAuth2UserService customOAuth2UserService;
     private final OAuth2SuccessHandler successHandler;
     private final TokenService tokenService;
@@ -83,3 +130,4 @@ public class SecurityConfig {
     }
 
 }
+ */

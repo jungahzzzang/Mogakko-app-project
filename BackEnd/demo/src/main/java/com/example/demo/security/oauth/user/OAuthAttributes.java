@@ -1,9 +1,8 @@
-package com.example.demo.entity.oauth;
+package com.example.demo.security.oauth.user;
 
 import com.example.demo.entity.User;
-import com.example.demo.entity.role.Role;
-import lombok.Builder;
 import lombok.Getter;
+import springfox.documentation.service.OAuth;
 
 import java.util.Map;
 
@@ -34,8 +33,27 @@ public class OAuthAttributes {
             return ofKakao(userNameAttributeName, attributes);
         } else if (registrationId.equals("naver")) {
             return ofNaver(userNameAttributeName,attributes);
+        } else if (registrationId.equals("github")){
+            return ofGithub(userNameAttributeName,attributes);
+        } else if (registrationId.equals("twitter")){
+            return ofTwitter(userNameAttributeName,attributes);
+        } else if (registrationId.equals("google")){
+            return ofGoogle(userNameAttributeName, attributes);
         }
-        return ofGoogle(userNameAttributeName, attributes);
+
+        throw new IllegalArgumentException("Invaild Provider Type.");
+    }
+
+    private static OAuthAttributes ofTwitter(String userNameAttributeName, Map<String, Object> attributes) {
+        return null;
+    }
+
+    private static OAuthAttributes ofGithub(String userNameAttributeName, Map<String, Object> attributes) {
+        return new OAuthAttributes(attributes,
+                userNameAttributeName,
+                (String) attributes.get("name"),
+                (String) attributes.get("email"),
+                (String) attributes.get("avatar_url"));
     }
 
     private static OAuthAttributes ofKakao(String userNameAttributeName, Map<String, Object> attributes) {
@@ -74,8 +92,6 @@ public class OAuthAttributes {
         return User.builder()
                 .name(name)
                 .email(email)
-                .picture(picture)
-                .role(Role.GUEST)
                 .build();
     }
 }

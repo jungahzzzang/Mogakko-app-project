@@ -1,17 +1,49 @@
 package com.example.demo.entity;
 
-import com.example.demo.entity.role.Role;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import com.example.demo.common.AuthProvider;
+import com.example.demo.entity.role.UserRole;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Getter
+@ToString
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
+@Table(name = "user_table")
 public class User extends BaseTimeEntity{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true, nullable = false)
+    private String email;
+
+    @Column(unique = true)
+    private String name;
+
+    private String description;
+
+    private String img;
+
+    @Enumerated(EnumType.STRING)
+    private UserRole role;
+
+    @Enumerated(EnumType.STRING)
+    private AuthProvider authProvider;
+
+    private String refreshToken;
+
+    public User update(String name, String img){
+        this.name = name;
+        this.img = img;
+
+        return this;
+    }
+    /*
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -56,6 +88,6 @@ public class User extends BaseTimeEntity{
     public String getRoleKey(){
         return this.role.getKey();
     }
-
+*/
 
 }

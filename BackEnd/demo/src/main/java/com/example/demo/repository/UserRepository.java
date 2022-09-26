@@ -2,11 +2,24 @@ package com.example.demo.repository;
 
 import com.example.demo.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    // 소셜 로그인 반환 값 중 email를 통해 가입자 인지 신규 가입자 인지 판단하기 위한 메소드
     Optional<User> findByEmail(String email);
+
+    boolean existsByEmail(String email);
+
+    @Query("SELECT u.refreshToken FROM User u WHERE u.id=:id")
+    String getRefreshTokenById(@Param("id") Long id);
+
+    @Transactional
+    @Modifying
+    @Query("UPDATE User u SET u.refreshToken=:token WHERE u.id=:id")
+    void updateRefreshToken(@Param("id") Long id, @Param("token") String token);
 }
