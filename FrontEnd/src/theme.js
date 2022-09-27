@@ -17,7 +17,11 @@ export const theme = {
     //Image Component
 
     //Input Component
-
+    label: colors.grey_1,
+    inputPlaceholder: colors.grey_1,
+    inputBorder: colors.grey_1,
+    inputDisabledBackground: colors.grey_0,
+    
     //Button Component
     buttonBackground: colors.green,
     buttonTitle: colors.pink,
