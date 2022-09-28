@@ -4,124 +4,144 @@ import {WebView} from 'react-native-webview';
 import ScreenContainer from '../../components/ScreenContainer';
 import {KAKAO_AUTH_URL, kakaoClientId, kakaoRedirectURL} from '../../utils/OAuth';
 import axios from 'axios';
-//import * as SecureStore from 'expo-secure-store';
+import qs from 'qs';
+import {useSetRecoilState} from "recoil";
+import { memberTokenState } from "../../state/MemberState";
 
 // const runFirst = `window.ReactNativeWebView.postMessage("this is message from web");`;
 const INJECTED_JAVASCRIPT = `window.ReactNativeWebView.postMessage('message from webView')`;
 
 const KakaoLoginScreen = ({navigation}) => {
 
-    WebView = {
-        canGoBack: false,
-        ref: null
-    }
+    //const navigation = useNavigation();
+    //const setToken = useSetRecoilState(memberTokenState);
 
-    useEffect(() => {
-        const backAction = () => {
-            if(this.WebView.canGoBack && this.WebView.ref){
-                this.WebView.ref.goBack();
-                return true;
-            }else{
-                Alert.alert('메인 페이지로 돌아갈까요?', [
-                    { text: '아니요', onPress: () => null,},
-                    { text: '네', onPress: () => navigation.navigate('Main') }
-                ]);
+    // const onNavigationStateChange = (webViewState) => {
 
-                return true;
-            }};
+    //     const url = webViewState.url;
+    //     let accessToken;
+    //     let isCreated = true;
+    //     let success = true;
 
-            const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+    //     if(url.split("?").length <= 1){
+    //         return;
+    //     }
 
-            return () => backHandler.remove([navState.canGoBack])
-    }, [])
+    //     url
+    //         .split("?")[1]
+    //         .split("&")
+    //         .forEach((param) => {
+    //             const key = param.split("=")[0];
+    //             if(key === "access_token"){
+    //                 accessToken = param.split("=")[1];
+    //             }else if(key === "is_created"){
+    //                 isCreated = param.split("=")[1];
+    //             }else if(key === "success"){
+    //                 success = param.split("=")[1];
+    //             }
+    //         });
+    //     if(!success){
+    //         console.log("login Fail");
+    //         return;
+    //     }
 
-    function LogInProgress(data){
-        
+    //     if(accessToken){
+    //         setToken(accessToken);
+    //         if(isCreated === "true"){
+    //             navigation.navigate("Register");
+    //         }else{
+    //             navigation.navigate("Main");
+    //         }
+    //     }
+    // }
+
+    // webView = {
+    //     canGoBack: false,
+    //     ref: null
+    // }
+
+    // useEffect(() => {
+    //     const backAction = () => {
+    //         if(this.webView.canGoBack && this.webView.ref){
+    //             this.webView.ref.goBack();
+    //             return true;
+    //         }else{
+    //             Alert.alert('메인 페이지로 돌아갈까요?', [
+    //                 { text: '아니요', onPress: () => null,},
+    //                 { text: '네', onPress: () => navigation.navigate('Main') }
+    //             ]);
+
+    //             return true;
+    //         }};
+
+    //         const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+
+    //         return () => backHandler.remove([navState.canGoBack])
+    // }, [])
+
+    const getCode = (target) => {
         //access code는 url에 붙어 장황하게 날아온다.
         //substring으로 url에서 code= 뒤를 substring하면 된다.
 
+        console.log("beginning of getCode")
+        console.log(target)
+
         const exp = "code=";
-        var condition = data.indexOf(exp);
+        var condition = target.indexOf(exp);
+        console.log(`condition: ${condition}`)
+
         if(condition != 1){
 
-            var request_code = data.substring(condition + exp.length);
+            const requestCode = target.substring(condition + exp.length);
 
-            console.log("*****access code***** = "+ request_code);
+            console.log("*****access code***** = "+ requestCode);
 
             //토큰값 받기
-            requsetToken(request_code);
+            requsetToken(requestCode);
         }
     };
 
     const requsetToken = async (request_code) => {
 
-        var returnValue = "none";
+        console.log("beginning of requestToken")
 
-        var request_token_url = "https://kauth.kakao.com/oauth/token";
+        var requestTokenUrl = "https://kauth.kakao.com/oauth/token";
 
-        axios({
+        const options = qs.stringify({
+            grant_type: 'authorization_code',
+            client_id: kakaoClientId,
+            redirect_uri: kakaoRedirectURL,
+            request_code
+        });
 
-            method: "post",
-
-            url: request_token_url,
-
-            withCredentials: true,
-
-            params: {
-
-                grant_type: 'authoriation_code',
-
-                client_id: {kakaoClientId},
-
-                redirect_uri: {kakaoRedirectURL},
-
-                code: request_code,
-            },
-        }).then(function (response) {
-            returnValue = response.data.access_token;
-            console.log('token', returnValue)
-            requestplayer(returnValue)
-
-        }).catch(function (error) {
+        try{
             
-            console.log('error', error);
-        });
-    };
+            console.log("before axios post")
+            
+            const tokenResponse = await axios.post(requestTokenUrl, options);
+            const ACCESS_TOKEN = tokenResponse.data.access_token;
 
-    const requestplayer = async (returnValue) => {
+            console.log("after axios post")
 
-        var token = returnValue;
-
-        var request_player_url = "";
-
-        axios({
-
-            method: "GET",
-
-            url: request_player_url,
-
-            headers: {
-                Authorization: 'Bearer '+ token
-            },
-
-        }).then(function (response) {
-
-            returnValue = response.data;
-            let nickname = response.data.kakao_account.prifile.nickname;
-
-            console.log(returnValue)
-
-            const userSettings = {
-
+            const body = {
+                ACCESS_TOKEN,
             };
+            console.log("before post")
 
-            navigation.navigate('loginSuccess',)
-        
-        }).catch(function (error){
+            const response = await axios.post(kakaoRedirectURL, body);
+            const value = response.data;
+            const result = await storeUser(value);
 
-            console.log('error', error);
-
-        });
+            if (result === 'stored') {
+                const user = await getData('user');
+                dispatchEvent(read_S(user));
+                await navigation.navigate('Main');
+            }
+            
+            console.log(response)
+        }catch(e){
+            console.log(e);
+        }
     };
 
     return (
@@ -135,9 +155,13 @@ const KakaoLoginScreen = ({navigation}) => {
                 javaScriptEnabled={true}
                 injectedJavaScript={INJECTED_JAVASCRIPT}
                 onMessage={ (event) => {
-                    LogInProgress(event.nativeEvent["url"]);
+                    //LogInProgress(event.nativeEvent["url"]);
+                    const data = event.nativeEvent.url;
+                    getCode(data);
                     //onMessage... : webView에서 온 데이터를 event handler로 잡아서 logInProgress로 전달
                 }}
+
+                //onNavigationStateChange={onNavigationStateChange}
             />
         </ScreenContainer>
     );
