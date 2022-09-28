@@ -1,7 +1,7 @@
 import React from "react";
 import ScreenContainer from "../../components/ScreenContainer";
 import {WebView} from "react-native-webview";
-import {NAVER_AUTH_URL} from "../../utils/OAuth";
+import {NAVER_AUTH_URL} from "../../utils/OAuth.js";
 
 const INJECTED_JAVASCRIPT = `window.ReactNativeWebView.postMessage('message from webView')`;
 
