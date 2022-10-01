@@ -38,6 +38,19 @@ const Login = ({navigation}) => {
             <View>
                 <Image source={PinkLogo} style={{width: 300, height: 45}}/>
             </View>
+            <View>
+                <TouchableOpacity style={{
+                        ...styles.socialLoginBtn,
+                        marginTop: 10,
+                        height: 30,
+                        backgroundColor: '#FFFFFF'
+                    }} activeOpacity={0.8} onPress={()=>
+                        navigation.navigate('SignupScreen')}
+                    >
+                        <GithubLogo />
+                        <Text >회원가입</Text>
+                </TouchableOpacity>
+            </View>
             <View >
                 <TouchableOpacity style={{
                     ...styles.socialLoginBtn,
