@@ -1,12 +1,7 @@
 import * as React from 'react';
 import { MenuItem, InputLabel, FormControl, Select } from '@material-ui/core';
 
-export default function SelectBox() {
-    const [field, setField ] = React.useState('');
-
-    const handleChange = (event) => {
-        setField(event.target.value);
-    };
+const selectBox = ({field, setField, onChange}) => {
 
     return (
         <FormControl sx={{ m: 1, minWidth: 120}} size="smail" >
@@ -16,15 +11,17 @@ export default function SelectBox() {
                 id='demo-simple-select-autowidth'
                 value={field}
                 label="Field"
-                onChange={handleChange}
+                onChange={onChange}
                 autoWidth
             >
                 <MenuItem value="">
                     <em>None</em>
                 </MenuItem>
-                <MenuItem value={backEnd}>백엔드</MenuItem>
-                <MenuItem value={frontEnd}>프론트엔드</MenuItem>
+                <MenuItem value={field}>{field}</MenuItem>
+                <MenuItem value={field}>{field}</MenuItem>
             </Select>
         </FormControl>
     );
 }
+
+export default selectBox;

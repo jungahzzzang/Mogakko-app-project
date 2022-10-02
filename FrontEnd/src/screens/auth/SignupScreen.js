@@ -1,13 +1,25 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef, useContext} from "react";
 import {Keyboard, KeyboardAvoidingView, Text, View} from 'react-native';
 //import AsyncStorage from "@react-native-community/async-storage";
 import { MemberApi } from "../../api/MemberApi";
 import SelectBox from "../../components/SelectBox";
-import Input from "../../components/Input";
+import SignupInput from "../../components/SignupInput";
 import Button from "../../components/Button";
 import ScreenContainer from "../../components/ScreenContainer";
 
-const SignupScreen = ({navigation}) => {
+const SignupScreen = () => {
+
+    const [userInput, setUserInput] = useState("");
+    const [field, setField ] = React.useState('');
+
+    const HandleChange = (e, type) => {
+        const value = e.target.value;
+        
+        if(type == 'field')
+            setField(value)
+    };
+
+    const FIELD_SELECT = ['백엔드', '프론트엔드']
 
     // useEffect(() => {
     //     const fetchMemberInfo = async () => {
@@ -53,22 +65,22 @@ const SignupScreen = ({navigation}) => {
     return (
         <ScreenContainer>
             <View>
-                <Input
-                    label="nickName"
-                    //value={nickname}
-                    // onChangeText={text => setName(text)}
-                    // onSubmitEditing={() => {
-                    //     setNickName(nickname.trim());
-                    //     fieldRef.current.focus();
-                    // }}
-                    // onBlue={() => setNickName(nickname.trim())}
-                    placeholder="닉네임을 입력해 주세요."
-                    returnKeyType="next"
+                <SignupInput
+                    userInput={userInput}
                 />
             </View>
-            <View>
-                <SelectBox />
-            </View>
+            <View> 
+                <SelectBox 
+                    value={field}
+                    onChange={(e) => HandleChange(e, 'field')}
+                >
+                    {
+                        FIELD_SELECT.map((field, idx) => {
+                            return <option key={idx} value={field}>{field}</option>
+                        })
+                    }
+                </SelectBox>
+            </View> 
             <View>
                 <Button
                     title="Signup"
