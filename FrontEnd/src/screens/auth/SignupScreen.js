@@ -1,25 +1,47 @@
 import React, {useEffect, useState, useRef, useContext} from "react";
-import {Keyboard, KeyboardAvoidingView, Text, View} from 'react-native';
+import {Keyboard, KeyboardAvoidingView, Text, Image, View, StyleSheet} from 'react-native';
 //import AsyncStorage from "@react-native-community/async-storage";
-import { MemberApi } from "../../api/MemberApi";
-import SelectBox from "../../components/SelectBox";
+//import { MemberApi } from "../../api/MemberApi";
+import { PinkLogo } from "../../utils/Images";
+import styled from "styled-components";
+import RNPickerSelect from 'react-native-picker-select';
 import SignupInput from "../../components/SignupInput";
 import Button from "../../components/Button";
 import ScreenContainer from "../../components/ScreenContainer";
 
-const SignupScreen = () => {
+const Container = styled.View`
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: ${({theme}) => theme.background};
+`;
+
+const pickerSelectStyles = StyleSheet.create({
+    inputIOS: {
+        fontSize: 16,
+        height: 50, 
+        width: 300, 
+        color: '#000000',
+        borderColor: '#000000', 
+        borderWidth: 1, 
+        borderRadius: 12,
+        padding: 10
+    },
+    inputAndroid: {
+        fontSize: 16,
+        height: 50, 
+        width: 300, 
+        color: '#000000',
+        borderColor: '#000000', 
+        borderWidth: 1, 
+        borderRadius: 12,
+        padding: 10
+    },
+})
+
+export default function SignupScreen() {
 
     const [userInput, setUserInput] = useState("");
-    const [field, setField ] = React.useState('');
-
-    const HandleChange = (e, type) => {
-        const value = e.target.value;
-        
-        if(type == 'field')
-            setField(value)
-    };
-
-    const FIELD_SELECT = ['백엔드', '프론트엔드']
 
     // useEffect(() => {
     //     const fetchMemberInfo = async () => {
@@ -63,24 +85,26 @@ const SignupScreen = () => {
     // };
 
     return (
-        <ScreenContainer>
+        <Container>
+            <View>
+                <Image source={PinkLogo} style={{width: 300, height: 45}}/>
+            </View>
             <View>
                 <SignupInput
                     userInput={userInput}
                 />
             </View>
-            <View> 
-                <SelectBox 
-                    value={field}
-                    onChange={(e) => HandleChange(e, 'field')}
-                >
-                    {
-                        FIELD_SELECT.map((field, idx) => {
-                            return <option key={idx} value={field}>{field}</option>
-                        })
-                    }
-                </SelectBox>
-            </View> 
+            <View>
+                <RNPickerSelect
+                    fixAndroidTouchableBug={true}   //안드로이드에서 클릭을 여러 번 해야 나오는 에러 해결
+                    useNativeAndroidPickerStyle={false} //기본 안드로이드 스타일 적용 거부
+                    onValueChange={(value) => console.log(value)}
+                    items={[
+                        {label: 'Backend', value: 'backend'},
+                        {label: 'Frontend', value: 'frontend'},
+                    ]}
+                />
+            </View>
             <View>
                 <Button
                     title="Signup"
@@ -88,8 +112,6 @@ const SignupScreen = () => {
                     //disabled={disabled}
                 />
             </View>
-        </ScreenContainer>
+        </Container>
     );
 };
-
-export default SignupScreen;
