@@ -7,7 +7,7 @@ import styled from "styled-components";
 import RNPickerSelect from 'react-native-picker-select';
 import SignupInput from "../../components/SignupInput";
 import Button from "../../components/Button";
-import ScreenContainer from "../../components/ScreenContainer";
+//import ScreenContainer from "../../components/ScreenContainer";
 
 const Container = styled.View`
     flex: 1;
@@ -103,11 +103,12 @@ export default function SignupScreen() {
                         {label: 'Backend', value: 'backend'},
                         {label: 'Frontend', value: 'frontend'},
                     ]}
+                    style={pickerSelectStyles}
                 />
             </View>
             <View>
                 <Button
-                    title="Signup"
+                    title="모각코 시작하기"
                     //onPress={__handleSignupButtonPress}
                     //disabled={disabled}
                 />
