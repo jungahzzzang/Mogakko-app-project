@@ -1,17 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Text, Image, View, TouchableOpacity, StyleSheet } from "react-native";
+import ScreenContainer from "../../components/ScreenContainer";
 import { PinkLogo } from "../../utils/Images";
 import KakaoLogo from "../../../assets/image/login/kakao.svg";
 import NaverLogo from "../../../assets/image/login/naver.svg";
 import GithubLogo from "../../../assets/image/login/github.svg";
-
-const Container = styled.View`
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    background-color: ${({theme}) => theme.background};
-`;
 
 const styles = StyleSheet.create({
     socialLoginBtn: {
@@ -34,7 +28,7 @@ const styles = StyleSheet.create({
 
 const Login = ({navigation}) => {
     return(
-        <Container>
+        <ScreenContainer>
             <View>
                 <Image source={PinkLogo} style={{width: 300, height: 45}}/>
             </View>
@@ -91,7 +85,7 @@ const Login = ({navigation}) => {
                         <Text >깃허브로 시작하기</Text>
                 </TouchableOpacity>
             </View>
-        </Container>
+        </ScreenContainer>
     );
 };
 

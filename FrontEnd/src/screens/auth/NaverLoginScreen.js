@@ -7,7 +7,7 @@ const INJECTED_JAVASCRIPT = `window.ReactNativeWebView.postMessage('message from
 
 const NaverLoginScreen = () => {
     return (
-        <ScreenContainer style={{flex: 1}}>
+        <ScreenContainer>
             <WebView
                 originWhitelist={['*']}
                 scalesPageToFit={true}

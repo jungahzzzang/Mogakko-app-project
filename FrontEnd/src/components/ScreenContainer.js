@@ -1,19 +1,11 @@
-import React, {useContext} from "react";
-import { SafeAreaView, Platform } from "react-native";
-import { ThemeContext } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 
-const ScreenContainer = props => {
-    const theme = useContext(ThemeContext);
-
-    return (
-        <SafeAreaView flex={1} style={{
-            backgroundColor: props.backgroundColor || theme.backgroundColor,
-            paddingTop: Platform.OS === 'android' ? 24 : 0,
-        }}
-        >
-            {props.children}
-        </SafeAreaView>
-    )
-}
+const ScreenContainer = styled.View`
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: ${({theme}) => theme.background};
+`   
 
 export default ScreenContainer;

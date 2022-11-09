@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { Text } from "react-native";
+import ScreenContainer from "../../components/ScreenContainer";
 
 // const StudyChat = ({navigation, route}) => {
 //     useLayoutEffect(() => {
@@ -8,16 +8,12 @@ import { Text } from "react-native";
 //     }, []);
 // }
 
-const Container = styled.View`
-    flex: 1;
-    background-color: ${({theme}) => theme.background};
-`
 
 const StudyChat = () => {
     return(
-        <Container>
+        <ScreenContainer>
             <Text style={{fontSize: 24}}>Study Chat</Text>
-        </Container>
+        </ScreenContainer>
     );
 };
 

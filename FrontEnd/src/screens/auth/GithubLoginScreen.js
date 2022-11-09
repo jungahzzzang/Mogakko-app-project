@@ -7,7 +7,7 @@ const INJECTED_JAVASCRIPT = `window.ReactNativeWebView.postMessage('message from
 
 const GithubLoginScreen = () => {
     return (
-        <ScreenContainer style={{flex: 1}}>
+        <ScreenContainer>
             <WebView
                 originWhitelist={['*']}
                 scalesPageToFit={true}

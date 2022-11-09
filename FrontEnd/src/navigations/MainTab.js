@@ -1,16 +1,19 @@
 import React, {useContext} from "react";
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import StudyChatList from "../screens/StudyChatList";
-import Mypage from "../screens/Mypage";
-import {MaterialIcons} from '@expo/vector-icons';
+import {Ionicons} from '@expo/vector-icons'; 
 import { ThemeContext } from "styled-components";
+//각 페이지
+import StudyChatList from "../screens/studychat/StudyChatList";
+import MainScreen from "../screens/main/MainScreens";
+import Mypage from "../screens/Mypage";
+import NotifyList from "../screens/notify/NotifyList";
 
 const Tab = createBottomTabNavigator();
 
 const TabBarIcon = ({focused, name}) => {
     const theme = useContext(ThemeContext);
     return(
-        <MaterialIcons
+        <Ionicons
             name={name}
             size={26}
             color={focused ? theme.tabActiveColor : theme.tabInactiveColor}
@@ -28,21 +31,47 @@ const MainTab = () => {
             }}
         >
             <Tab.Screen
-                name="Chat List"
-                component={StudyChatList}
+                name="메인페이지"
+                component={MainScreen}
                 options={{
+                    headerShown: false,
                     tabBarIcon :({ focused }) =>
                     TabBarIcon({
                         focused,
-                        name: focused ? 'code' : 'developer-mode',
+                        name: focused ? 'home' : 'home-outline',
                     }),
                 }}
             />
-           
             <Tab.Screen
-                name="Mypage"
+                name="스터디"
+                component={StudyChatList}
+                options={{
+                    headerShown: false,
+                    tabBarIcon :({ focused }) =>
+                    TabBarIcon({
+                        focused,
+                        name: focused ? 'cafe' : 'cafe-outline',
+                    }),
+                }}
+            />
+            <Tab.Screen
+                name="알림"
+                component={NotifyList}
+                options={{
+                    headerShown: false,
+                    tabBarIcon :({ focused }) =>
+                    TabBarIcon({
+                        focused,
+                        name: focused ? 'notifications' : 'notifications-outline',
+                    }),
+                }}
+            />
+        
+            <Tab.Screen
+                name="마이페이지"
                 component={Mypage}
                 options={{
+                    headerShown: false,
                     tabBarIcon: ({focused}) =>
                     TabBarIcon({
                         focused,

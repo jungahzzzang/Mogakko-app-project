@@ -36,4 +36,8 @@ export const theme = {
     //Spinner
     spinnerBackground: colors.black,
     spinnerIndicator: colors.white,
+
+    //SearchBar
+    unclicked: colors.grey_0,
+    clicked: colors.grey_1
 };

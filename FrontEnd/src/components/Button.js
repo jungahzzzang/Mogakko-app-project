@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from 'prop-types';
 
 const TRANSPARENT = 'transparent';
 
@@ -35,16 +34,16 @@ const Button = ({containerStyle, title, onPress, isFilled, disabled}) => {
     );
 };
 
-Button.defaultProps = {
-    isFilled: true,
-};
+// Button.defaultProps = {
+//     isFilled: true,
+// };
 
-Button.PropTypes = {
-    containerStyle: PropTypes.object,
-    title: PropTypes.string,
-    onPress: PropTypes.func.isRequired,
-    isFilled: PropTypes.bool,
-    disabled: PropTypes.bool
-};
+// Button.PropTypes = {
+//     containerStyle: PropTypes.object,
+//     title: PropTypes.string,
+//     onPress: PropTypes.func.isRequired,
+//     isFilled: PropTypes.bool,
+//     disabled: PropTypes.bool
+// };
 
 export default Button;

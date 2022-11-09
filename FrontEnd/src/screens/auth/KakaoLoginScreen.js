@@ -1,5 +1,4 @@
 import React, {useEffect, useState, useRef} from 'react';
-import { Alert, BackHandler } from 'react-native';
 import {WebView} from 'react-native-webview';
 import ScreenContainer from '../../components/ScreenContainer';
 import {KAKAO_AUTH_URL, kakaoClientId, kakaoRedirectURL} from '../../utils/OAuth';
@@ -145,7 +144,7 @@ const KakaoLoginScreen = ({navigation}) => {
     };
 
     return (
-         <ScreenContainer style={{flex: 1}}>
+         <ScreenContainer>
             <WebView
                 originWhitelist={['*']}
                 scalesPageToFit={true}

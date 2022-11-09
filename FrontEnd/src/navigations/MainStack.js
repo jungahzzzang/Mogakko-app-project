@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 //import { StudyChat, ChatCreation } from "../screens";
 import StudyChat from "../screens/studychat/StudyChat";
 import ChatCreation from "../screens/studychat/ChatCreation";
+import MainScreen from "../screens/main/MainScreens";
 import MainTab from "./MainTab";
 
 const Stack = createStackNavigator();
@@ -16,6 +17,7 @@ const MainStack = () => {
         <Stack.Navigator
             initialRouteName="Main"
             screenOptions={{
+                headerShown: false,
                 headerTitleAlign: 'center',
                 headerTintColor: theme.headerTintColor,
                 cardStyle: {backgroundColor: theme.backgroundColor},

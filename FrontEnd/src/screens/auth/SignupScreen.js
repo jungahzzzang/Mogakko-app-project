@@ -3,18 +3,11 @@ import {Keyboard, KeyboardAvoidingView, Text, Image, View, StyleSheet} from 'rea
 //import AsyncStorage from "@react-native-community/async-storage";
 //import { MemberApi } from "../../api/MemberApi";
 import { PinkLogo } from "../../utils/Images";
-import styled from "styled-components";
 import RNPickerSelect from 'react-native-picker-select';
+import ScreenContainer from "../../components/ScreenContainer";
 import SignupInput from "../../components/SignupInput";
 import Button from "../../components/Button";
 //import ScreenContainer from "../../components/ScreenContainer";
-
-const Container = styled.View`
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    background-color: ${({theme}) => theme.background};
-`;
 
 const pickerSelectStyles = StyleSheet.create({
     inputIOS: {
@@ -85,7 +78,7 @@ export default function SignupScreen() {
     // };
 
     return (
-        <Container>
+        <ScreenContainer>
             <View>
                 <Image source={PinkLogo} style={{width: 300, height: 45}}/>
             </View>
@@ -113,6 +106,6 @@ export default function SignupScreen() {
                     //disabled={disabled}
                 />
             </View>
-        </Container>
+        </ScreenContainer>
     );
 };
