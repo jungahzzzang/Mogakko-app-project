@@ -1,10 +1,8 @@
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import { ThemeContext } from "styled-components";
 import { createStackNavigator } from "@react-navigation/stack";
-//import { StudyChat, ChatCreation } from "../screens";
 import StudyChat from "../screens/studychat/StudyChat";
 import ChatCreation from "../screens/studychat/ChatCreation";
-import MainScreen from "../screens/main/MainScreens";
 import MainTab from "./MainTab";
 
 const Stack = createStackNavigator();

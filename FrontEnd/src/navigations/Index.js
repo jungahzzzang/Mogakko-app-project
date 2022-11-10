@@ -1,9 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import {View, Text} from "react-native";
-import AuthStack from './AuthStack';
-import MainStack from './MainStack';
-import * as Font from 'expo-font';
 import MainStack from './MainStack';
 import * as Font from 'expo-font';
 
@@ -15,7 +12,7 @@ const Navigation = () => {
     useEffect(() => {
         const Load = async()=>{
             await Font.loadAsync({
-                'SpoqaHanSansNeo' : require('../../assets/fonts/Pretendard-Medium.ttf')
+                'Pretendard' : require('../../assets/fonts/Pretendard-Regular.ttf')
             })
             setFontLoad(true)
         }

@@ -55,14 +55,14 @@ const MainTab = () => {
                 }}
             />
             <Tab.Screen
-                name="알림"
+                name="채팅"
                 component={NotifyList}
                 options={{
                     headerShown: false,
                     tabBarIcon :({ focused }) =>
                     TabBarIcon({
                         focused,
-                        name: focused ? 'notifications' : 'notifications-outline',
+                        name: focused ? 'chatbox-ellipses' : 'chatbox-ellipses-outline',
                     }),
                 }}
             />
