@@ -4,6 +4,8 @@ import {View, Text} from "react-native";
 import AuthStack from './AuthStack';
 import MainStack from './MainStack';
 import * as Font from 'expo-font';
+import MainStack from './MainStack';
+import * as Font from 'expo-font';
 
 const Navigation = () => {
 
@@ -23,7 +25,7 @@ const Navigation = () => {
     return(
         fontLoad?
         <NavigationContainer>
-           <MainStack/>
+           <MainStack />
         </NavigationContainer>
         :
         <View>
