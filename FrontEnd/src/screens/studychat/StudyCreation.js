@@ -20,21 +20,21 @@ const style = StyleSheet.create({
     }
 })
 
-const ChatCreation = ({navigation}) => {
+const StudyCreation = () => {
     return (
         <SafeAreaView>
             <ScrollView>
                 <View>
-                    <Text styled={{fontSize: 24}}>채팅방 생성</Text> 
+                    <Text styled={{fontSize: 24}}>스터디 생성</Text> 
+                    <Text styled={{fontSize: 24}}>카테고리</Text> 
+                    <Text styled={{fontSize: 24}}>나이</Text>
+                    <Text styled={{fontSize: 24}}>인원</Text> 
                  </View>
             </ScrollView>
-            <Button style={style.button}>
-                <Text style={style.buttonText}>+</Text>
-            </Button> 
         </SafeAreaView>
     );
 };
 
 
 
-export default ChatCreation;
+export default StudyCreation;

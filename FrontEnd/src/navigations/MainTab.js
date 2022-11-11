@@ -34,7 +34,14 @@ const MainTab = () => {
                 name="메인페이지"
                 component={MainScreen}
                 options={{
-                    headerShown: false,
+                    headerStyle: {
+                        height: 40
+                    },
+                    headerTitleStyle:{
+                        fontSize: 13
+                    },
+                    headerTintColor: "#1D5349",
+                    //headerShown: false,
                     tabBarIcon :({ focused }) =>
                     TabBarIcon({
                         focused,
@@ -46,7 +53,13 @@ const MainTab = () => {
                 name="스터디"
                 component={StudyChatList}
                 options={{
-                    headerShown: false,
+                    headerStyle: {
+                        height: 40
+                    },
+                    headerTitleStyle:{
+                        fontSize: 13
+                    },
+                    headerTintColor: "#1D5349",
                     tabBarIcon :({ focused }) =>
                     TabBarIcon({
                         focused,
@@ -55,14 +68,20 @@ const MainTab = () => {
                 }}
             />
             <Tab.Screen
-                name="채팅"
+                name="알림"
                 component={NotifyList}
                 options={{
-                    headerShown: false,
+                    headerStyle: {
+                        height: 40
+                    },
+                    headerTitleStyle:{
+                        fontSize: 13
+                    },
+                    headerTintColor: "#1D5349",
                     tabBarIcon :({ focused }) =>
                     TabBarIcon({
                         focused,
-                        name: focused ? 'chatbox-ellipses' : 'chatbox-ellipses-outline',
+                        name: focused ? 'notifications' : 'notifications-outline',
                     }),
                 }}
             />
@@ -71,7 +90,13 @@ const MainTab = () => {
                 name="마이페이지"
                 component={Mypage}
                 options={{
-                    headerShown: false,
+                    headerStyle: {
+                        height: 40
+                    },
+                    headerTitleStyle:{
+                        fontSize: 13
+                    },
+                    headerTintColor: "#1D5349",
                     tabBarIcon: ({focused}) =>
                     TabBarIcon({
                         focused,

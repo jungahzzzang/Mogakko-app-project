@@ -29,8 +29,8 @@ export const theme = {
     buttonLogout: colors.pink,
 
     //Navigation
-    headerTintColor: colors.black,
-    tabActiveColor: colors.green,
+    headerTintColor: colors.green,
+    tabActiveColor: colors.pink,
     tabInactiveColor: colors.grey_1,
 
     //Spinner
